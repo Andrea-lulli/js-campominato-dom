@@ -79,7 +79,7 @@ function dati() {
 
           console.log("bomba");
           this.classList.add("bomba")
-          alert("sconfitta")
+          alert("Hai Perso")
           let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
           giocoFinito = false
 
