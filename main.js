@@ -25,57 +25,59 @@ let array = []
 
 
 
- for ( let k = 0; k < 16; k++) {
 
-   let Array = array;
-  
-   let  random = Math.floor(Math.random() * 100) + 1;
-  
-  Array.push(random) 
-  
-  
+for (let k = 0; k < 16; k++) {
 
-  } 
+  let Array = array;
 
+  let random = Math.floor(Math.random() * 100) + 1;
+  Array.push(random)
 
-   console.log(array);
+  console.log(array[k]);
+}
 
 
- 
+let Quadrato;
+
 // funzione per premere bottone
 function dati() {
-
-
 
   //funzione per creare 100 quadrati
   for (let i = 0; i < 100; i++) {
     numero = 1 + numero;
 
-    let Quadrato = quadrato();
-
-
-   
+    Quadrato = quadrato();
 
     Quadrato.append(numero)
 
 
     griglia.append(Quadrato);
 
+
     //this per acceddere alla funzione con il click
     Quadrato.addEventListener("click", function () {
 
-      console.log(i +1);
-      console.log(array);
-      
+      if (array.includes(i + 1) == true) {
 
-      if( (i + 1) == array ){
-        console.log("bomba");
-
+        console.log("bomba");       
         this.classList.toggle("bomba")
-      }else{
-      this.classList.toggle("active")
+        alert("sconfitta")
+        
 
-    }
-  })
-}}
+      } else if (array.includes(i + 1) == false) {
 
+        this.classList.toggle("active")
+        Punteggio = 1
+        console.log(Punteggio);
+      }
+      
+    })
+  }
+}
+
+
+
+//let Punteggio = document.getElementById(punteggio)
+let Punteggio;
+let conteggioPunti = 100 + (Punteggio)
+console.log(conteggioPunti);
