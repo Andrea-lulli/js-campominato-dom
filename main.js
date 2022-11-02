@@ -59,25 +59,29 @@ function dati() {
 
       if (array.includes(i + 1) == true) {
 
-        console.log("bomba");       
+        console.log("bomba");
         this.classList.toggle("bomba")
         alert("sconfitta")
+        let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
         
 
       } else if (array.includes(i + 1) == false) {
 
         this.classList.toggle("active")
-        Punteggio = 1
+        Punteggio = Punteggio + 1
+
         console.log(Punteggio);
       }
-      
+
     })
+    
   }
+  
 }
 
 
 
 //let Punteggio = document.getElementById(punteggio)
-let Punteggio;
-let conteggioPunti = 100 + (Punteggio)
-console.log(conteggioPunti);
+let Punteggio = 0;
+
+

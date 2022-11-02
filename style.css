@@ -17,9 +17,17 @@ body{
     width: 100%;
     background-color: rgba(127, 255, 212, 255);
     
-    height: 86vh;
+    height: 80vh;
     align-items: center;
     display: flex;
+}
+
+#punteggio{
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(127, 255, 212, 255);   
 }
 
 /* nav */
