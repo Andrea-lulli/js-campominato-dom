@@ -23,6 +23,7 @@ let numero = 0;
 //genera 16 numeri causali da 1 a 100
 let array = []
 
+let Punteggio = 0;
 
 
 
@@ -41,7 +42,7 @@ let Quadrato;
 
 // funzione per premere bottone
 function dati() {
-
+  
   //funzione per creare 100 quadrati
   for (let i = 0; i < 100; i++) {
     numero = 1 + numero;
@@ -69,19 +70,13 @@ function dati() {
 
         this.classList.toggle("active")
         Punteggio = Punteggio + 1
-
         console.log(Punteggio);
       }
-
-    })
-    
+    }) 
   }
-  
 }
 
 
 
-//let Punteggio = document.getElementById(punteggio)
-let Punteggio = 0;
 
 
