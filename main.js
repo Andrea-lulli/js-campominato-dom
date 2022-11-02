@@ -24,21 +24,27 @@ let numero = 0;
 let array = []
 
 
-  for (let k = 0; k < 16; k++) {
 
-    let Array = array;
-    
-    let  random = Math.floor(Math.random() * 100) + 1;
-    
-    Array.push(random)  
-   }  
-   
-//console.log(array);
+ for ( let k = 0; k < 16; k++) {
+
+   let Array = array;
+  
+   let  random = Math.floor(Math.random() * 100) + 1;
+  
+  Array.push(random) 
+  
+  
+
+  } 
+
+
+   console.log(array);
+
 
  
 // funzione per premere bottone
 function dati() {
-  
+
 
 
   //funzione per creare 100 quadrati
