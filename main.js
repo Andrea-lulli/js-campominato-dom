@@ -63,14 +63,13 @@ function dati() {
         if (array.includes(i + 1) == true) {
 
           console.log("bomba");
-          this.classList.toggle("bomba")
+          this.classList.add("bomba")
           alert("sconfitta")
           let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
           giocoFinito = false
 
         } else if (array.includes(i + 1) == false) {
-
-          this.classList.toggle("active")
+          this.classList.add("active")
           Punteggio = Punteggio + 1
           console.log(Punteggio);
         }
