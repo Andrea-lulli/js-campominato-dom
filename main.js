@@ -25,6 +25,8 @@ let array = []
 
 let Punteggio = 0;
 
+let giocoFinito = true
+
 
 
 for (let k = 0; k < 16; k++) {
@@ -42,7 +44,7 @@ let Quadrato;
 
 // funzione per premere bottone
 function dati() {
-  
+
   //funzione per creare 100 quadrati
   for (let i = 0; i < 100; i++) {
     numero = 1 + numero;
@@ -57,22 +59,23 @@ function dati() {
 
     //this per acceddere alla funzione con il click
     Quadrato.addEventListener("click", function () {
+      if (giocoFinito) {
+        if (array.includes(i + 1) == true) {
 
-      if (array.includes(i + 1) == true) {
+          console.log("bomba");
+          this.classList.toggle("bomba")
+          alert("sconfitta")
+          let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
+          giocoFinito = false
 
-        console.log("bomba");
-        this.classList.toggle("bomba")
-        alert("sconfitta")
-        let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
-        
+        } else if (array.includes(i + 1) == false) {
 
-      } else if (array.includes(i + 1) == false) {
-
-        this.classList.toggle("active")
-        Punteggio = Punteggio + 1
-        console.log(Punteggio);
+          this.classList.toggle("active")
+          Punteggio = Punteggio + 1
+          console.log(Punteggio);
+        }
       }
-    }) 
+    })
   }
 }
 
