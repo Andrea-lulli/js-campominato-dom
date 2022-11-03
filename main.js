@@ -77,11 +77,10 @@ function dati() {
       if (giocoFinito) {
         if
           (array.includes(i + 1) == false) {
-          this.classList.add("active")
+          this.classList.add("active")         
           Punteggio = Punteggio + 1
           console.log(Punteggio);
-
-
+      
         } else if (array.includes(i + 1) == true) {
 
           console.log("bomba");
