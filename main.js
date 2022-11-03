@@ -81,16 +81,18 @@ function dati() {
           this.classList.add("bomba")
           alert("Hai Perso")
           let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
-          giocoFinito = false
+          griglia = ""           
+          giocoFinito = false         
 
         } else if (array.includes(i + 1) == false) {
           this.classList.add("active")
           Punteggio = Punteggio + 1
-          console.log(Punteggio);
+          console.log(Punteggio);          
         }
       }
-    })
-  }
+      
+    })  
+  } 
 }
 
 
