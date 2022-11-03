@@ -89,12 +89,12 @@ function dati() {
           this.classList.add("bomba")
           alert("Hai Perso")
           let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
-          griglia = ""
+          //griglia = ""
           giocoFinito = false
         }
-      }
-    })
-  }
+      }     
+    })   
+  }  
 }
 
 
