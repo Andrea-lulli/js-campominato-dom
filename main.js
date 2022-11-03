@@ -80,6 +80,8 @@ function dati() {
           this.classList.add("active")         
           Punteggio = Punteggio + 1
           console.log(Punteggio);
+          this.style.pointerEvents = "none";
+
       
         } else if (array.includes(i + 1) == true) {
 
