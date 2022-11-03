@@ -75,26 +75,26 @@ function dati() {
     //this per acceddere alla funzione con il click
     Quadrato.addEventListener("click", function () {
       if (giocoFinito) {
-        if (array.includes(i + 1) == true) {
+        if
+          (array.includes(i + 1) == false) {
+          this.classList.add("active")
+          Punteggio = Punteggio + 1
+          console.log(Punteggio);
+
+
+        } else if (array.includes(i + 1) == true) {
 
           console.log("bomba");
           this.classList.add("bomba")
           alert("Hai Perso")
           let conteggioPunti = document.getElementById("punteggio").innerHTML = `Mi dispiace, hai perso, Il tuo Punteggio è: ${Punteggio}`
-          griglia = ""           
-          giocoFinito = false         
-
-        } else if (array.includes(i + 1) == false) {
-          this.classList.add("active")
-          Punteggio = Punteggio + 1
-          console.log(Punteggio);          
+          griglia = ""
+          giocoFinito = false
         }
       }
-      
-    })  
-  } 
+    })
+  }
 }
-
 
 
 
